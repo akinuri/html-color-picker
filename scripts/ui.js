@@ -37,9 +37,9 @@ function validateInput(elm, e) {
 
 $(window).on("wheel", function(e) {
 	var focused = document.activeElement;
-	if (focused.nodeName='input' && focused.type && focused.type.match(/number/)) {
+	if (focused.nodeName = 'input' && focused.type && focused.type.match(/number/)) {
 		e.preventDefault();
-		var value = parseFloat(focused.value, 10);
+		var value = parseFloat(focused.value);
 		var step  = parseFloat(focused.step);
 		if (e.originalEvent.deltaY < 0) {
 			value += step;
